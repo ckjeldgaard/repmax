@@ -4,7 +4,7 @@
   "description": "A One-Rep Max (1RM) calculator",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm run clean && npm run sasslint && npm run test && npm run stryker && npm run compile",
+    "build": "cross-env NODE_ENV=production npm run clean && npm run sasslint && npm run test:coverage && npm run stryker && npm run compile",
     "clean": "rimraf dist && rimraf coverage && rimraf reports",
     "compile": "webpack --config config/webpack.config.prod.js",
     "codecov": "codecov -f coverage/*.json",
