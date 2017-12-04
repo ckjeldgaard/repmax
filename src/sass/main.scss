@@ -1,0 +1,11 @@
+@import 'imports/styles';
+
+// Colors
+$primary: $black !default;
+$secondary: lighten($turqoise, 10%) !default;
+$accent: $yellow !default;
+
+header {
+  background-color: $primary;
+  color: $off-white;
+}

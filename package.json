@@ -1,0 +1,89 @@
+{
+  "name": "repmax",
+  "version": "1.0.0",
+  "description": "A One-Rep Max (1RM) calculator",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production npm run clean && npm run sasslint && npm run test && npm run stryker && npm run compile",
+    "clean": "rimraf dist && rimraf coverage && rimraf reports",
+    "compile": "webpack --config config/webpack.config.prod.js",
+    "dev": "webpack-dev-server --hot --inline",
+    "lint": "tslint 'src/**/*.tsx'",
+    "sasslint": "node_modules/.bin/sass-lint -v",
+    "stryker": "stryker run",
+    "test": "jest",
+    "test:coverage": "jest --collectCoverage true"
+  },
+  "author": "ckp",
+  "license": "MIT",
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/test/.*\\.(ts|tsx|js)$",
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "<rootDir>/config/sass-stub.js"
+    },
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "src/**/*.{tsx,jsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 80
+      }
+    }
+  },
+  "dependencies": {
+    "@types/react": "^16.0.25",
+    "@types/react-dom": "^16.0.3",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.5",
+    "@types/enzyme-adapter-react-16": "^1.0.1",
+    "@types/jest": "^21.1.8",
+    "@types/webpack-env": "^1.13.2",
+    "autoprefixer": "^7.1.6",
+    "awesome-typescript-loader": "^3.4.0",
+    "compression-webpack-plugin": "^1.0.1",
+    "copy-webpack-plugin": "^4.2.3",
+    "cross-env": "^5.1.1",
+    "css-loader": "^0.28.7",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "favicons-webpack-plugin": "0.0.7",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^21.2.1",
+    "jest-cli": "^21.2.1",
+    "jest-environment-jsdom-11.0.0": "^20.0.9",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.9",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.6.2",
+    "sass-lint": "^1.12.1",
+    "sass-loader": "^6.0.6",
+    "source-map-loader": "^0.2.3",
+    "stryker": "^0.15.4",
+    "stryker-api": "^0.11.0",
+    "stryker-html-reporter": "^0.11.2",
+    "stryker-jest-runner": "^0.3.0",
+    "stryker-typescript": "^0.7.1",
+    "style-loader": "^0.19.0",
+    "ts-jest": "^21.2.3",
+    "tslint": "^5.8.0",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.6.2",
+    "webpack": "~3.8.1",
+    "webpack-dev-server": "~2.9.4"
+  }
+}

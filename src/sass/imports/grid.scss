@@ -1,0 +1,21 @@
+html,
+body {
+  height: 100%;
+}
+
+.app {
+  width: $media-small;
+  background-color: $paper;
+  margin: auto;
+
+  box-shadow: $space-tiny $space-tiny $space-small $silver;
+}
+
+@media screen and (max-width: $media-small) {
+  .app {
+    border: none;
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+  }
+}
