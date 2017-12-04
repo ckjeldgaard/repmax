@@ -1,9 +1,8 @@
-sudo: required
 language: node_js
 node_js:
-  - "6"
+- '6'
 script:
-  - npm run build
+- npm run build
 deploy:
   provider: pages
   skip_cleanup: true
@@ -11,3 +10,6 @@ deploy:
   local_dir: dist
   on:
     branch: master
+env:
+  global:
+    secure: ebMEsnEgco2Ik3Lfy/5XGYlvTYyu8TAJ/GnotMRUrM1wkHLRt64EHgf974ipU0u5yn9IIxtFh4xCseDQpe8j+duYthq96N7S8hEMR79eNN/jTR1BeoiXhZoasbAhmUm9+vqVntHc0EmShdlGzxY7b2WvBUuy8dZrQ/S1HQH1PQNYWeqm4rzVYT8Hnik/D+7izDGzlFAVjPDL7EixXmG4ABihGymFwR1nfhx96eRMSa537qOMDojK7VihIqzBC17VwZ4piu/gDp5wrhIg+uEdxTBo/ynQMtB4+Kkd7pC8+ClRjY5iS6GRWrUFUs+vgsZ9T6VB9stj4eKmUupS3vndp0MnHJ8923Ar0jxpXhvlKa9iRUH2iN6TP7M9n+s5sFKGuN/Blx++1ymgsFcS+9wRnrXcdnmAIskXPl+YGLgzJe74NUR68qN2HjLxgjbyM2qn3eofk5r4sbRkZ1Mwy2NFJXumJharP7/h1amAHWQ4XtsA2xCR6th/4IxOZiP43J0h/17yet8Xyk/zLRdoWAA+/AISl2lG00SfZ44Pu4Ouo2HjaSrAg8Ow9ytXRp109oXU4mY5mIujtTxd9RYJrd0K1pqPSTDir+u3Evin2rqj8F1p7FY4voYjJL/cbepDhqFBPI7lepQgrQCFoxrpui7Auq2gI93n9d1f0lN2JZMPwpk=
