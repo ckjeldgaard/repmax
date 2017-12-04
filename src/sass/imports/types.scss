@@ -1,8 +1,7 @@
 @import './variables';
 
-// sass-lint:disable-all
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,500,700|Gentium+Book+Basic:400,700);
-// sass-lint:enable-all
+// TODO: Importing Google fonts doesn't work with Sass Lint for now:
+// @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,500,700|Gentium+Book+Basic:400,700);
 
 div,
 p,
