@@ -9,8 +9,7 @@ let config = {
   output: {
     path: helpers.root('/dist'),
     filename: 'js/[name].[hash].js',
-    chunkFilename: 'js/[name].[hash].js',
-    publicPath: '/'
+    chunkFilename: 'js/[name].[hash].js'
   },
   devtool: 'source-map',
   resolve: {
