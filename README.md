@@ -1,5 +1,7 @@
 # RepMax
 
+[![Build Status](https://travis-ci.org/ckjeldgaard/repmax.svg?branch=master)](https://travis-ci.org/ckjeldgaard/repmax)
+
 > A One-Rep Max (1RM) calculator written in [React](https://reactjs.org/).
 
 ## Build Setup
