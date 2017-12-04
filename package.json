@@ -7,12 +7,13 @@
     "build": "cross-env NODE_ENV=production npm run clean && npm run sasslint && npm run test && npm run stryker && npm run compile",
     "clean": "rimraf dist && rimraf coverage && rimraf reports",
     "compile": "webpack --config config/webpack.config.prod.js",
+    "codecov": "codecov -f coverage/*.json",
     "dev": "webpack-dev-server --hot --inline",
     "lint": "tslint 'src/**/*.tsx'",
     "sasslint": "node_modules/.bin/sass-lint -v",
     "stryker": "stryker run",
     "test": "jest",
-    "test:coverage": "jest --collectCoverage true"
+    "test:coverage": "jest --collectCoverage true && npm run codecov"
   },
   "author": "ckp",
   "license": "MIT",
@@ -52,6 +53,7 @@
     "@types/webpack-env": "^1.13.2",
     "autoprefixer": "^7.1.6",
     "awesome-typescript-loader": "^3.4.0",
+    "codecov": "^3.0.0",
     "compression-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.2.3",
     "cross-env": "^5.1.1",
