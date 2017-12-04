@@ -41,7 +41,8 @@ webpackConfig.module.rules = [...webpackConfig.module.rules,
         {
           loader: 'postcss-loader',
           options: {
-            plugins: () => [autoprefixer]
+              plugins: () => [autoprefixer],
+              sourceMap: true
           }
         },
         {
