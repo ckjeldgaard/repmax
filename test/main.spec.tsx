@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Hello from '../src/components/Hello';
 
 jest.unmock('react-dom');
 const ReactDOM = require('react-dom');
@@ -7,12 +6,13 @@ ReactDOM.render = jest.fn();
 const spy = jest.spyOn(document, 'getElementById');
 
 import '../src/main';
+import RepMaxApp from '../src/components/repmax-app';
 
 describe('index', () => {
 
     it('should index correctly', () => {
         expect(ReactDOM.render).toHaveBeenCalledTimes(1);
-        expect(ReactDOM.render).toHaveBeenCalledWith(<Hello compiler='TypeScript' framework='React' />, null);
+        expect(ReactDOM.render).toHaveBeenCalledWith(<RepMaxApp />, null);
     });
 
     it('should find the correct container', () => {

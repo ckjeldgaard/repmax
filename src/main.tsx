@@ -1,12 +1,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Hello from './components/Hello';
+import RepMaxApp from './components/repmax-app';
 
 if (process.env.ENV) {
     require('./sass/main.scss');
 }
 
 ReactDOM.render(
-    <Hello compiler='TypeScript' framework='React' />,
+    <RepMaxApp />,
     document.getElementById('app-main')
 );

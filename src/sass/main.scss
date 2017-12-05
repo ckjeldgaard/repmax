@@ -1,5 +1,7 @@
 @import 'imports/styles';
 
+@import '../components/header/header';
+
 // Colors
 $primary: $black !default;
 $secondary: lighten($turqoise, 10%) !default;
