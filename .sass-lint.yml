@@ -26,7 +26,7 @@ rules:
     - convention: hyphenatedlowercase
   empty-args: 2
   empty-line-between-blocks:
-    - 2
+    - 1
   # Extends cause trouble
   no-extends: 2
   mixin-name-format:
