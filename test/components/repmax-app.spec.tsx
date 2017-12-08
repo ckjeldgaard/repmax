@@ -9,11 +9,11 @@ describe('RepMaxApp component', () => {
 
     it('should render correctly', () => {
         const hello: ShallowWrapper = shallow(<RepMaxApp />);
-        expect(hello.text()).toEqual('<Header />');
+        expect(hello.text()).toEqual('<Header /><ContentArea />');
     });
 
     it('should output the title', () => {
         const hello: ShallowWrapper = shallow(<RepMaxApp />);
-        expect(hello.render().text()).toEqual('RepMax');
+        expect(hello.render().text()).toEqual('RepMaxThis is the content');
     });
 });

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {ReactNode} from 'react';
 import Header from './header/header';
+import ContentArea from './content-area/content-area';
 
 export default class RepMaxApp extends React.Component {
 
@@ -9,6 +10,7 @@ export default class RepMaxApp extends React.Component {
     render(): ReactNode {
         return <div>
             <Header title={this.TITLE} />
+            <ContentArea />
         </div>;
     }
 }

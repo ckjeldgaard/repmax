@@ -1,8 +1,9 @@
 header {
-  padding: $space-small;
+  padding: $space-small $space-med;
   h1 {
     color: $off-white;
     font-size: $font-big;
     font-weight: bold;
+    margin: 0;
   }
 }
