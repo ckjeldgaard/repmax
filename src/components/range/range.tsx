@@ -6,6 +6,7 @@ export interface RangeProps {
     abbr: string;
     min: number;
     max: number;
+    step: number;
     default: number;
 }
 
@@ -32,7 +33,7 @@ export default class Range extends React.Component<RangeProps, RangeState> {
                 <label htmlFor='range'>{this.props.label}:</label>
                 <p>{this.state.value}{this.props.abbr}</p>
             </div>
-            <input id='range' type='range' min={this.props.min} max={this.props.max} value={this.state.value} onChange={this.handleChange}/>
+            <input id='range' type='range' min={this.props.min} max={this.props.max} step={this.props.step} value={this.state.value} onChange={this.handleChange}/>
         </div>;
     }
 }
