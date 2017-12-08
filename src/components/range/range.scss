@@ -1,0 +1,68 @@
+@mixin slider-track($color, $height) {
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: $height;
+    cursor: pointer;
+    background: $color;
+    border-radius: ($height / 2);
+    border: none;
+  }
+  &::-moz-range-track {
+    width: 100%;
+    height: $height;
+    cursor: pointer;
+    background: $color;
+    border-radius: ($height / 2);
+    border: none;
+  }
+}
+
+@mixin slider-thumb($color, $size, $offset) {
+  &::-webkit-slider-thumb {
+    height: $size;
+    width: $size;
+    border-radius: ($size / 2);
+    border: none;
+    background: $color;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: $offset;
+  }
+  &::-moz-range-thumb {
+    height: $size;
+    width: $size;
+    border-radius: ($size / 2);
+    border: none;
+    background: $color;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: $offset;
+  }
+}
+
+.range {
+  margin: $space-med 0;
+  .meta {
+    font-size: $font-big;
+    display: flex;
+    label {
+      flex-grow: 1;
+    }
+    p {
+      font-weight: bold;
+      font-size: $font-big;
+    }
+  }
+  input[type=range] {
+    background-color: $paper;
+    display: block;
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 0.7px 0;
+    @include slider-track($silver, 26px);
+    @include slider-thumb($carrot, 40px, -7px);
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+}

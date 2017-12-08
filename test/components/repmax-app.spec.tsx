@@ -14,6 +14,6 @@ describe('RepMaxApp component', () => {
 
     it('should output the title', () => {
         const hello: ShallowWrapper = shallow(<RepMaxApp />);
-        expect(hello.render().text()).toEqual('RepMaxThis is the content');
+        expect(hello.render().text()).toContain(('RepMax'));
     });
 });
