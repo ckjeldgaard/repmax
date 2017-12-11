@@ -1,5 +1,4 @@
 import {EpleyFormula} from '../../src/model/formula/epley-formula';
-import {Formula} from '../../src/model/formula/formula';
 
 describe('Formula', () => {
 
