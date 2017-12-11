@@ -32,7 +32,7 @@
     },
     "collectCoverage": false,
     "collectCoverageFrom": [
-      "src/**/*.{tsx,jsx}"
+      "src/**/*.{tsx,jsx,ts}"
     ],
     "coverageThreshold": {
       "global": {

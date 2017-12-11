@@ -2,12 +2,14 @@ module.exports = function (config) {
     config.set({
         files: [
             "src/**/*.tsx",
-            "test/**/*.tsx"
+            "src/**/*.ts",
+            "test/**/*.tsx",
+            "test/**/*.ts"
         ],
         testRunner: "jest",
         reporter: ["html", "clear-text", "progress"],
         coverageAnalysis: "off",
-        mutate: ["src/**/*.tsx"],
+        mutate: ["src/**/*.tsx", "src/**/*.ts"],
         mutator: 'typescript',
         transpilers: ["typescript"],
         tsconfigFile: "tsconfig.json",
