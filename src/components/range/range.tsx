@@ -8,6 +8,7 @@ export interface RangeProps {
     max: number;
     step: number;
     default: number;
+    inputHandler: (value: number) => any;
 }
 
 export interface RangeState {
@@ -19,12 +20,12 @@ export default class Range extends React.Component<RangeProps, RangeState> {
     constructor(props: RangeProps) {
         super(props);
         this.state = {value: this.props.default};
-
         this.handleChange = this.handleChange.bind(this);
     }
 
     private handleChange(event: ChangeEvent<HTMLInputElement>): void {
         this.setState({value: Number(event.target.value)});
+        this.props.inputHandler(Number(event.target.value));
     }
 
     render(): ReactNode {
@@ -33,7 +34,7 @@ export default class Range extends React.Component<RangeProps, RangeState> {
                 <label htmlFor='range'>{this.props.label}:</label>
                 <p>{this.state.value}{this.props.abbr}</p>
             </div>
-            <input id='range' type='range' min={this.props.min} max={this.props.max} step={this.props.step} value={this.state.value} onChange={this.handleChange}/>
+            <input id='range' type='range' min={this.props.min} max={this.props.max} step={this.props.step} value={this.state.value} onChange={this.handleChange} />
         </div>;
     }
 }
