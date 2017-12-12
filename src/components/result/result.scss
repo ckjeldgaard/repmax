@@ -1,0 +1,38 @@
+.result {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  table {
+    margin: $space-med auto;
+    overflow-x: auto;
+    thead {
+      tr {
+        border-bottom: 1px solid $silver;
+      }
+      th {
+        font-weight: bold;
+      }
+    }
+
+    tbody {
+      tr:nth-child(odd) {
+        background-color: $clouds;
+        border-top: 1px solid $silver;
+        border-bottom: 1px solid $silver;
+      }
+      td {
+        text-align: center;
+      }
+      td:nth-child(1) {
+        text-align: left;
+      }
+      td:nth-child(2) {
+        font-weight: bold;
+      }
+    }
+    th,
+    td {
+      padding: $space-small;
+    }
+  }
+}

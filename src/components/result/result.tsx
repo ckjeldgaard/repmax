@@ -22,31 +22,33 @@ export default class Result extends React.Component<ResultProps, {}> {
 
     render(): ReactNode {
         const matrix: number[][] = this.buildMatrix();
-        return <table>
-            <thead>
-            <tr>
-                <th>RM</th>
-                <th>Average</th>
-                {
-                    this.props.formulaBuilder.getFormulas().map((formula) => {
-                        return <th>{formula.name()}</th>;
+        return <div className='result'>
+            <table>
+                <thead>
+                <tr>
+                    <th>RM</th>
+                    <th>Average</th>
+                    {
+                        this.props.formulaBuilder.getFormulas().map((formula) => {
+                            return <th>{formula.name()}</th>;
+                        })
+                    }
+                </tr>
+                </thead>
+                <tbody>{
+                    matrix.map((row, index) => {
+                        const numbers = row.map((n) =>
+                            <td>{n}</td>
+                        );
+                        const average = new Avg(row).average();
+                        return <tr>
+                            <td scope='row'>{index + 1}RM</td>
+                            <td>{average}</td>
+                            {numbers}
+                        </tr>;
                     })
-                }
-            </tr>
-            </thead>
-            <tbody>{
-                matrix.map((row, index) => {
-                    const numbers = row.map((n) =>
-                        <td>{n}</td>
-                    );
-                    const average = new Avg(row).average();
-                    return <tr>
-                        <td scope='row'>{index + 1}RM</td>
-                        <td>{average}</td>
-                        {numbers}
-                    </tr>;
-                })
-            }</tbody>
-        </table>;
+                }</tbody>
+            </table>
+        </div>;
     }
 }
