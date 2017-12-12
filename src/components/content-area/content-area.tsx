@@ -3,6 +3,8 @@ import {ReactNode} from 'react';
 import Range from '../range/range';
 import Result from '../result/result';
 import {RmInput} from '../../model/rm-input';
+import {FormulaBuilder} from '../../model/business/formula-builder';
+import {RepmaxFormulaBuilder} from '../../model/business/repmax-formula-builder';
 
 export default class ContentArea extends React.Component<{}, RmInput> {
 
@@ -27,11 +29,15 @@ export default class ContentArea extends React.Component<{}, RmInput> {
         this.setState({reps: r});
     }
 
+    private formulaBuilder(): FormulaBuilder {
+        return new RepmaxFormulaBuilder();
+    }
+
     render(): ReactNode {
         return <article>
             <Range label='Weight' abbr=' kg.' min={0} max={200} step={5} default={this.DEFAULT_WEIGHT} inputHandler={this.changeWeight} />
             <Range label='Reps' abbr='' min={1} max={10} step={1} default={this.DEFAULT_REPS} inputHandler={this.changeReps} />
-            <Result input={this.state} />
+            <Result input={this.state} formulaBuilder={this.formulaBuilder()} />
         </article>;
     }
 }
