@@ -11,6 +11,7 @@ const glob = require('glob'),
   webpackConfig = require('./webpack.config.base'),
   helpers = require('./helpers'),
   DefinePlugin = require('webpack/lib/DefinePlugin'),
+  SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin'),
   env = require('../environment/prod.env');
 
 const extractSass = new ExtractTextPlugin({
@@ -112,6 +113,14 @@ webpackConfig.plugins = [...webpackConfig.plugins,
   }),
   new DefinePlugin({
     'process.env': env
+  }),
+  new SWPrecacheWebpackPlugin({
+    cacheId: 'koncert-app',
+    filename: 'service-worker.js',
+    maximumFileSizeToCacheInBytes: 3000000,
+    staticFileGlobs: ['dist/**/*.{js,html,css}'],
+    minify: true,
+    stripPrefix: 'dist/'
   }),
   new FaviconsWebpackPlugin(helpers.root('/src/icon.png'))
 ];
