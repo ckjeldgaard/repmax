@@ -1,6 +1,7 @@
 import {EpleyFormula} from '../../../src/model/formula/epley-formula';
 import {McGlothinFormula} from '../../../src/model/formula/mcglothin-formula';
 import {LombardiFormula} from '../../../src/model/formula/lombardi-formula';
+import {BrzyckiFormula} from '../../../src/model/formula/brzycki-formula';
 
 describe('Formula', () => {
 
@@ -13,13 +14,18 @@ describe('Formula', () => {
         expect(new EpleyFormula().repmax(80, 5)).toHaveLength(10);
     });
 
-    it('McGlothinFormula formula', () => {
+    it('McGlothin formula', () => {
         expect(new McGlothinFormula().name()).toEqual('McGlothin');
         expect(new McGlothinFormula().repmax(80, 5)).toEqual([90, 87, 84, 82, 80, 77, 75, 72, 70, 67]);
     });
 
-    it('LombardiFormula formula', () => {
+    it('Lombardi formula', () => {
         expect(new LombardiFormula().name()).toEqual('Lombardi');
         expect(new LombardiFormula().repmax(80, 5)).toEqual( [93, 87, 84, 81, 80, 78, 77, 76, 75, 74]);
+    });
+
+    it('Brzycki formula', () => {
+        expect(new BrzyckiFormula().name()).toEqual('Brzycki');
+        expect(new BrzyckiFormula().repmax(80, 5)).toEqual( [90, 87, 85, 82, 80, 77, 75, 72, 70, 67]);
     });
 });
