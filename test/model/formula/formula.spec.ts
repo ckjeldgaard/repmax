@@ -1,4 +1,5 @@
-import {EpleyFormula} from '../../src/model/formula/epley-formula';
+import {EpleyFormula} from '../../../src/model/formula/epley-formula';
+import {McGlothinFormula} from '../../../src/model/formula/mcglothin';
 
 describe('Formula', () => {
 
@@ -16,5 +17,9 @@ describe('Formula', () => {
 
     it('should provide a list of 1 item', () => {
         expect(new EpleyFormula().repmax(80, 5, 1)).toHaveLength(1);
+    });
+
+    it('McGlothinFormula formula', () => {
+        expect(new McGlothinFormula().repmax(80, 5)).toEqual([90, 87, 84, 82, 80, 77, 75, 72, 70, 67]);
     });
 });

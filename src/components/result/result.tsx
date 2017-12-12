@@ -15,6 +15,7 @@ export default class Result extends React.Component<ResultProps, {}> {
         const numbers: number[] = new EpleyFormula().repmax(this.props.input.weight, this.props.input.reps);
         const rows = numbers.map((n, index) =>
             <tr>
+                <td scope='row'>{index + 1}RM</td>
                 <td key={index}>{n}</td>
             </tr>
         );
@@ -22,9 +23,12 @@ export default class Result extends React.Component<ResultProps, {}> {
         return <div>
             <p>Result. Weight: {this.props.input.weight}, Reps: {this.props.input.reps}</p>
             <table>
-                <thead><tr>
+                <thead>
+                <tr>
+                    <th>RM</th>
                     <th>Epl</th>
-                </tr></thead>
+                </tr>
+                </thead>
                 <tbody>{rows}</tbody>
             </table>
         </div>;
