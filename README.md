@@ -6,6 +6,8 @@
 
 > A One-Rep Max (1RM) calculator written in [React](https://reactjs.org/).
 
+![Screenshot](https://imgur.com/Q8BputN.png)
+
 ## Build Setup
 
 ``` bash
