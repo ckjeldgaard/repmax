@@ -30,7 +30,7 @@ npm run sasslint
 npm test
 
 # run the mutation tests
-npm stryker
+npm run stryker
 
 # build for production with minification
 npm run build
