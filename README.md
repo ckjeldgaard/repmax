@@ -11,6 +11,8 @@
 This is a simple progressive web app capable of calculating [one-repetition maximums](https://en.wikipedia.org/wiki/One-repetition_maximum) for weight training.
 Focus has been on exploring React as well as setting up project structure with easy deployment using [Travis CI](https://travis-ci.org/) and maximizing quality by applying linting rules for Typescript and Sass, unit tests using [Jest](https://facebook.github.io/jest/) and mutation testing using [Stryker](https://stryker-mutator.github.io/).
 
+**[See Stryker mutation report](https://ckjeldgaard.github.io/repmax/reports/mutation/html/index.html)**.
+
 ## Build Setup
 
 ``` bash
