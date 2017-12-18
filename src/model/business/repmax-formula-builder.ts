@@ -5,6 +5,7 @@ import {EpleyFormula} from '../formula/epley-formula';
 import {LombardiFormula} from '../formula/lombardi-formula';
 import {BrzyckiFormula} from '../formula/brzycki-formula';
 import {MayhewFormula} from '../formula/mayhew-formula';
+import {WathanFormula} from '../formula/wathan-formula';
 
 export class RepmaxFormulaBuilder implements FormulaBuilder {
 
@@ -15,6 +16,7 @@ export class RepmaxFormulaBuilder implements FormulaBuilder {
         formulas.push(new McGlothinFormula());
         formulas.push(new BrzyckiFormula());
         formulas.push(new MayhewFormula());
+        formulas.push(new WathanFormula());
         return formulas;
     }
 }

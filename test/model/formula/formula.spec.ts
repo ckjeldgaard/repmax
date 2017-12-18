@@ -3,6 +3,7 @@ import {McGlothinFormula} from '../../../src/model/formula/mcglothin-formula';
 import {LombardiFormula} from '../../../src/model/formula/lombardi-formula';
 import {BrzyckiFormula} from '../../../src/model/formula/brzycki-formula';
 import {MayhewFormula} from '../../../src/model/formula/mayhew-formula';
+import {WathanFormula} from '../../../src/model/formula/wathan-formula';
 
 describe('Formula', () => {
 
@@ -33,6 +34,11 @@ describe('Formula', () => {
   it('Mayhew formula', () => {
     expect(new MayhewFormula().name()).toEqual('Mayhew');
     expect(new MayhewFormula().repmax(80, 5)).toEqual([95, 85, 83, 81, 80, 78, 76, 75, 74, 72]);
+  });
+
+  it('Wathan formula', () => {
+    expect(new WathanFormula().name()).toEqual('Wathan');
+    expect(new WathanFormula().repmax(80, 5)).toEqual([93, 88, 85, 82, 80, 77, 75, 73, 71, 69]);
   });
 
 });
