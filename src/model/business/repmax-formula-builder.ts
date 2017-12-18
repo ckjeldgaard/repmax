@@ -9,14 +9,14 @@ import {WathanFormula} from '../formula/wathan-formula';
 
 export class RepmaxFormulaBuilder implements FormulaBuilder {
 
-    getFormulas(): Formula[] {
-        let formulas: Formula[] = [];
-        formulas.push(new LombardiFormula());
-        formulas.push(new EpleyFormula());
-        formulas.push(new McGlothinFormula());
-        formulas.push(new BrzyckiFormula());
-        formulas.push(new MayhewFormula());
-        formulas.push(new WathanFormula());
-        return formulas;
-    }
+  getFormulas(): Formula[] {
+    let formulas: Formula[] = [];
+    formulas.push(new LombardiFormula());
+    formulas.push(new EpleyFormula());
+    formulas.push(new McGlothinFormula());
+    formulas.push(new BrzyckiFormula());
+    formulas.push(new MayhewFormula());
+    formulas.push(new WathanFormula());
+    return formulas;
+  }
 }
