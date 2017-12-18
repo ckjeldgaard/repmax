@@ -3,6 +3,7 @@ node_js:
 - '6'
 script:
 - npm run build
+- npm run postBuild
 deploy:
   provider: pages
   skip_cleanup: true
