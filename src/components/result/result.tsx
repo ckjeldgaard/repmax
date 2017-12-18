@@ -41,7 +41,8 @@ export default class Result extends React.Component<ResultProps, {}> {
                             <td>{n}</td>
                         );
                         const average = new Avg(row).average();
-                        return <tr>
+
+                        return <tr className={(index + 1) === this.props.input.reps ? 'active' : '' }>
                             <td scope='row'>{index + 1}RM</td>
                             <td>{average}</td>
                             {numbers}
