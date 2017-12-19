@@ -1,0 +1,18 @@
+article {
+  a {
+    color: $accent;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: $space-med;
+    margin-bottom: $space-med;
+    li {
+      padding-bottom: $space-tiny;
+    }
+  }
+}
