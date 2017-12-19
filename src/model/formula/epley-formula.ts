@@ -7,7 +7,7 @@ export class EpleyFormula implements Formula {
     return 'Epley';
   }
 
-  public repmax(weight: number, reps: number,): number[] {
+  public repmax(weight: number, reps: number): number[] {
     const oneRM = weight * (1 + reps / 30);
     let rms: number[] = [Math.floor(oneRM)];
     for (let i: number = 2; i <= Constants.DEFAULT_FORMULA_SIZE; i++) {
