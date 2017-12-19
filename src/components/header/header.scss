@@ -17,10 +17,10 @@ header {
     background-repeat: no-repeat;
   }
   .about {
-    background-image: url('/assets/img/info.png');
+    background-image: url('../../assets/img/info.png');
   }
   .back {
-    // background-image: url('/repmax/assets/img/back.png');
+    background-image: url('../../assets/img/back.png');
     margin-right: $space-small;
   }
 }

@@ -61,7 +61,7 @@ webpackConfig.module.rules = [...webpackConfig.module.rules,
   },
   {
     test: /\.(jpg|png|gif)$/,
-    loader: 'file-loader?name=assets/img/[name].[ext]'
+    loader: 'file-loader?name=../assets/img/[name].[ext]'
   },
   {
     test: /\.(eot|svg|ttf|woff|woff2)$/,
