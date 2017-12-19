@@ -13,12 +13,13 @@ Object.defineProperty(window.navigator, 'serviceWorker', {
 
 import '../src/main';
 import RepMaxApp from '../src/components/repmax-app';
+import {HashRouter} from 'react-router-dom';
 
 describe('index', () => {
 
   it('should index correctly', () => {
     expect(ReactDOM.render).toHaveBeenCalledTimes(1);
-    expect(ReactDOM.render).toHaveBeenCalledWith(<RepMaxApp/>, null);
+    expect(ReactDOM.render).toHaveBeenCalledWith(<HashRouter><RepMaxApp /></HashRouter>, null);
   });
 
   it('should find the correct container', () => {

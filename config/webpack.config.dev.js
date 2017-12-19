@@ -7,9 +7,10 @@ const helpers = require('./helpers'),
 webpackConfig.module.rules = [...webpackConfig.module.rules,
   {
     test: /\.scss$/,
-    use: [{
-      loader: 'style-loader'
-    },
+    use: [
+      {
+        loader: 'style-loader'
+      },
       {
         loader: 'css-loader'
       },

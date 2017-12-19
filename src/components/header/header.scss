@@ -1,9 +1,26 @@
 header {
   padding: $space-small $space-med;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   h1 {
     color: $off-white;
     font-size: $font-big;
     font-weight: bold;
     margin: 0;
+    flex-grow: 2;
+  }
+  .icon {
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-repeat: no-repeat;
+  }
+  .about {
+    background-image: url('/assets/img/info.png');
+  }
+  .back {
+    // background-image: url('/repmax/assets/img/back.png');
+    margin-right: $space-small;
   }
 }
