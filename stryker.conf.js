@@ -19,6 +19,6 @@ module.exports = function (config) {
       break: 80, // Fail if mutation score < 80
     },
     timeoutMs: 10000,
-    maxConcurrentTestRunners: 10
+    maxConcurrentTestRunners: 5
   });
 };
