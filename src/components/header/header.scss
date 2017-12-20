@@ -18,6 +18,11 @@ header {
     display: block;
     background-repeat: no-repeat;
   }
+  .back,
+  .about {
+    background-color: $off-white;
+    mask-repeat: no-repeat;
+  }
   .back {
     margin-right: $space-small;
   }

@@ -14,9 +14,9 @@ $accent: $nephritis !default;
 
 header {
   .back {
-    background-image: url('../assets/img/back.png');
+    mask-image: url('../assets/img/back.svg');
   }
   .about {
-    background-image: url('../assets/img/info.png');
+    mask-image: url('../assets/img/info.svg');
   }
 }
