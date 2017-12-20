@@ -9,7 +9,7 @@ import {RepmaxFormulaBuilder} from '../../model/business/repmax-formula-builder'
 export default class Home extends React.Component<{}, RmInput> {
 
   private readonly DEFAULT_WEIGHT: number = 50;
-  private readonly DEFAULT_REPS: number = 1;
+  private readonly DEFAULT_REPS: number = 5;
 
   constructor(props: Object) {
     super(props);
@@ -35,7 +35,7 @@ export default class Home extends React.Component<{}, RmInput> {
 
   render(): ReactNode {
     return <article>
-      <Range label='Weight' abbr=' kg.' min={0} max={200} step={5} default={this.DEFAULT_WEIGHT}
+      <Range label='Weight' abbr=' kg.' min={0} max={200} step={2} default={this.DEFAULT_WEIGHT}
              inputHandler={this.changeWeight}/>
       <Range label='Reps' abbr='' min={1} max={10} step={1} default={this.DEFAULT_REPS} inputHandler={this.changeReps}/>
       <Result input={this.state} formulaBuilder={this.formulaBuilder()}/>
