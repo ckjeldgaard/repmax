@@ -13,6 +13,10 @@ $accent: $nephritis !default;
 
 
 header {
-  background-color: $primary;
-  color: $off-white;
+  .back {
+    background-image: url('../assets/img/back.png');
+  }
+  .about {
+    background-image: url('../assets/img/info.png');
+  }
 }
