@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ckjeldgaard/repmax.svg?branch=master)](https://travis-ci.org/ckjeldgaard/repmax)
 [![codecov](https://codecov.io/gh/ckjeldgaard/repmax/branch/master/graph/badge.svg)](https://codecov.io/gh/ckjeldgaard/repmax)
+[![Mutation testing badge](https://badge.stryker-mutator.io/github.com/ckjeldgaard/repmax/master)](https://stryker-mutator.github.io)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/ckjeldgaard/repmax/blob/master/LICENSE.txt)
 
 > A One-Rep Max (1RM) calculator written in [React](https://reactjs.org/).

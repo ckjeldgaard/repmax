@@ -7,7 +7,7 @@ module.exports = function (config) {
       "test/**/*.ts"
     ],
     testRunner: "jest",
-    reporter: ["html", "clear-text", "progress"],
+    reporter: ["html", "clear-text", "progress", "dashboard"],
     coverageAnalysis: "off",
     mutate: ["src/**/*.tsx", "src/**/*.ts"],
     mutator: 'typescript',
