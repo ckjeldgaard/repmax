@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html><head><title>result/result.tsx
+ - Stryker report</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="../../strykerResources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../strykerResources/highlightjs/styles/default.css">
+<link rel="stylesheet" href="../../strykerResources/stryker.css"></head>
+<body><img class="stryker-image" alt="Stryker" src="../../strykerResources/stryker-80x80.png">
+<div class="container-fluid"><div class="row"><div class="col-lg-12"><h1 class="display-4">result/result.tsx
+ 
+<small class="text-muted">- Stryker report</small></h1></div></div>
+<ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../index.html">All files</a></li><li class="breadcrumb-item"><a href="../index.html">components</a></li>
+<li class="breadcrumb-item active">result/result.tsx</li></ol>
+<div class="row"><div class="col-lg-12"><div class="row"><div class="col-sm-11"><table class="table table-sm table-hover table-bordered table-no-top"><thead><tr><th style="width: 20%"><div><span>File / Directory</span></div></th>
+<th colspan="2"><div><span>Mutation score</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Killed</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Survived</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Timeout</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># No coverage</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Runtime errors</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Transpile errors</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total detected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total undetected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total mutants</span></div></th></tr></thead>
+<tbody><tr><td>result/result.tsx</td>
+<td><div class="progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" style="width: 100.00%;">100.00
+%</div></div></td>
+<th class="text-center text-success" style="width: 10%">100.00</th>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">10</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">2</td>
+<th class="text-center">10</th>
+<th class="text-center">0</th>
+<th class="text-center">12</th></tr>
+</tbody></table></div></div>
+<div class="row"><div class="col-lg-7"><div class="row legend"><form class="col-md-12" novalidate="novalidate">
+
+
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="3" type="checkbox">
+TimedOut
+ 
+(10)</label></div>
+
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="5" type="checkbox">
+TranspileError
+ 
+(2)</label></div>
+<a href="#" class="stryker-collapse-expand-all">Expand all</a></form></div>
+<pre><code class="lang-javascript"><span class="bg-null">import * as React from &#039;react&#039;;
+import {ReactNode} from &#039;react&#039;;
+import {RmInput} from &#039;../../model/rm-input&#039;;
+import {FormulaMatrix} from &#039;../../model/business/formula-matrix&#039;;
+import {Avg} from &#039;../../model/business/avg&#039;;
+import {FormulaBuilder} from &#039;../../model/business/formula-builder&#039;;
+
+export interface ResultProps {
+  input: RmInput;
+  formulaBuilder: FormulaBuilder;
+}
+
+export default class Result extends React.Component&lt;ResultProps, {}&gt; {
+
+  private buildMatrix(): number[][] </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="0"><span class="badge badge-secondary">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">{}</span><span class="stryker-original-code" data-mutant="0"><span class="bg-null">{
+    return new FormulaMatrix(
+      this.props.input.weight,
+      this.props.input.reps,
+      this.props.formulaBuilder.getFormulas()
+    ).build();
+  }</span></span><span class="bg-null">
+
+  render(): ReactNode </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TranspileError" data-mutant-status-annotation="secondary" data-mutant-status="5" data-mutant="1"><span class="badge badge-secondary">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">{}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-null">{
+    const matrix: number[][] = this.buildMatrix();
+    return &lt;div className=&#039;result&#039;&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;RM&lt;/th&gt;
+          &lt;th&gt;Average&lt;/th&gt;
+          {
+            this.props.formulaBuilder.getFormulas().map((formula) =&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TimedOut" data-mutant-status-annotation="warning" data-mutant-status="3" data-mutant="2"><span class="badge badge-warning">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">{}</span><span class="stryker-original-code" data-mutant="2"><span class="bg-warning-light">{
+              return &lt;th&gt;{formula.name()}&lt;/th&gt;;
+            }</span></span><span class="bg-null">)
+          }
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;{
+          matrix.map((row, index) =&gt; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: TimedOut" data-mutant-status-annotation="warning" data-mutant-status="3" data-mutant="3"><span class="badge badge-warning">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">{}</span><span class="stryker-original-code" data-mutant="3"><span class="bg-warning-light">{
+            const numbers = row.map(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrowFunction" data-content="status: TimedOut" data-mutant-status-annotation="warning" data-mutant-status="3" data-mutant="4"><span class="badge badge-warning">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">() =&gt; undefined</span><span class="stryker-original-code" data-mutant="4"><span class="bg-warning-light">(n) =&gt;
+              &lt;td&gt;{n}&lt;/td&gt;</span></span><span class="bg-warning-light">
+            );
+            const average = new Avg(row).average();
+
+            return &lt;tr className={</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: TimedOut" data-mutant-status-annotation="warning" data-mutant-status="3" data-mutant="5"><span class="badge badge-warning">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: TimedOut" data-mutant-status-annotation="warning" data-mutant-status="3" data-mutant="6"><span class="badge badge-warning">6</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="6">true</span><span class="stryker-original-code" data-mutant="5"><span class="stryker-original-code" data-mutant="6"><span class="bg-warning-light">(index </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: TimedOut" data-mutant-status-annotation="warning" data-mutant-status="3" data-mutant="7"><span class="badge badge-warning">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">-</span><span class="stryker-original-code" data-mutant="7"><span class="bg-warning-light">+</span></span><span class="bg-warning-light"> 1) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: TimedOut" data-mutant-status-annotation="warning" data-mutant-status="3" data-mutant="8"><span class="badge badge-warning">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">!==</span><span class="stryker-original-code" data-mutant="8"><span class="bg-warning-light">===</span></span><span class="bg-warning-light"> this.props.input.reps</span></span></span><span class="bg-warning-light"> ? </span><a href="#" class="stryker-mutant-button" tabindex="0" title="StringLiteral" data-content="status: TimedOut" data-mutant-status-annotation="warning" data-mutant-status="3" data-mutant="9"><span class="badge badge-warning">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">&quot;&quot;</span><span class="stryker-original-code" data-mutant="9"><span class="bg-warning-light">&#039;active&#039;</span></span><span class="bg-warning-light"> : </span><a href="#" class="stryker-mutant-button" tabindex="0" title="StringLiteral" data-content="status: TimedOut" data-mutant-status-annotation="warning" data-mutant-status="3" data-mutant="10"><span class="badge badge-warning">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">&quot;Stryker was here!&quot;</span><span class="stryker-original-code" data-mutant="10"><span class="bg-warning-light">&#039;&#039;</span></span><span class="bg-warning-light">}&gt;
+              &lt;td scope=&#039;row&#039;&gt;{index </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: TimedOut" data-mutant-status-annotation="warning" data-mutant-status="3" data-mutant="11"><span class="badge badge-warning">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">-</span><span class="stryker-original-code" data-mutant="11"><span class="bg-warning-light">+</span></span><span class="bg-warning-light"> 1}RM&lt;/td&gt;
+              &lt;td&gt;{average}&lt;/td&gt;
+              {numbers}
+            &lt;/tr&gt;;
+          }</span></span><span class="bg-null">)
+        }&lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;;
+  }</span></span><span class="bg-null">
+}</span>
+</code></pre></div>
+<div class="col-lg-5"><table class="table table-sm table-hover mutant-table"><thead><tr><th>#</th>
+<th>Mutator</th>
+<th>State</th>
+<th>Location</th>
+<th>Original</th>
+<th>Replacement</th></tr></thead>
+<tbody><tr><th>0</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>14
+:
+36</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>1</th>
+<td>Block</td>
+<td>TranspileError</td>
+<td>22
+:
+22</td>
+<td><code>{
+   ...;
+  }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>2</th>
+<td>Block</td>
+<td>TimedOut</td>
+<td>31
+:
+69</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>3</th>
+<td>Block</td>
+<td>TimedOut</td>
+<td>38
+:
+37</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>4</th>
+<td>ArrowFunction</td>
+<td>TimedOut</td>
+<td>39
+:
+36</td>
+<td><code>( ) =...</  ></code></td>
+<td><code>() =></code></td></tr>
+<tr><th>5</th>
+<td>ConditionalExpression</td>
+<td>TimedOut</td>
+<td>44
+:
+34</td>
+<td><code>(    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>6</th>
+<td>ConditionalExpression</td>
+<td>TimedOut</td>
+<td>44
+:
+34</td>
+<td><code>(    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>7</th>
+<td>BinaryExpression</td>
+<td>TimedOut</td>
+<td>44
+:
+41</td>
+<td><code>+</code></td>
+<td><code>-</code></td></tr>
+<tr><th>8</th>
+<td>BinaryExpression</td>
+<td>TimedOut</td>
+<td>44
+:
+46</td>
+<td><code>===</code></td>
+<td><code>!==</code></td></tr>
+<tr><th>9</th>
+<td>StringLiteral</td>
+<td>TimedOut</td>
+<td>44
+:
+74</td>
+<td><code>'      '</code></td>
+<td><code>""</code></td></tr>
+<tr><th>10</th>
+<td>StringLiteral</td>
+<td>TimedOut</td>
+<td>44
+:
+85</td>
+<td><code>''</code></td>
+<td><code>"    ...   !"</code></td></tr>
+<tr><th>11</th>
+<td>BinaryExpression</td>
+<td>TimedOut</td>
+<td>45
+:
+37</td>
+<td><code>+</code></td>
+<td><code>-</code></td></tr></tbody></table></div></div></div></div>
+<footer>Generated with stryker-html-reporter generator. Visit the 
+<a href="https://stryker-mutator.io" target="_blank">Stryker website</a></footer></div>
+<script src="../../strykerResources/popper.js/dist/umd/popper.min.js" defer="defer"></script>
+<script src="../../strykerResources/jquery/dist/jquery.slim.min.js" defer="defer"></script>
+<script src="../../strykerResources/bootstrap/js/bootstrap.min.js" defer="defer"></script>
+<script src="../../strykerResources/stryker.js" defer="defer"></script></body></html>
