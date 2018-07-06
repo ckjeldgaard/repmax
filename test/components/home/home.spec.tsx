@@ -19,13 +19,13 @@ describe('Home component', () => {
   it('should update weight state when Range child component changes', () => {
     const wrapper = mount(<Home/>);
     wrapper.find(Range).first().find('input').simulate('change', {target: {value: 99}});
-    expect(wrapper.state().weight).toBe(99);
+    expect(wrapper.state('weight')).toBe(99);
   });
 
   it('should update reps state when Range child component changes', () => {
     const wrapper = mount(<Home/>);
     wrapper.find(Range).last().find('input').simulate('change', {target: {value: 7}});
-    expect(wrapper.state().reps).toBe(7);
+    expect(wrapper.state('reps')).toBe(7);
   });
 
   it('should set default weight to 50', () => {
